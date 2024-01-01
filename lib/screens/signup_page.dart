@@ -40,7 +40,7 @@ class _SignupPageState extends State<SignupPage> {
                   color: Colors.grey.shade300,
                   borderRadius: BorderRadius.circular(20)),
               margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
-              child: TextField(
+              child: TextFormField(
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(
@@ -55,7 +55,7 @@ class _SignupPageState extends State<SignupPage> {
                   color: Colors.grey.shade300,
                   borderRadius: BorderRadius.circular(20)),
               margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
-              child: TextField(
+              child: TextFormField(
                 controller: _passwordController,
                 obscureText: true,
                 decoration: const InputDecoration(
