@@ -13,6 +13,7 @@ class _LoginPageState extends State<LoginPage> {
   final GlobalKey<FormState> _loginKey = GlobalKey();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final RegExp validEmail = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,6 +49,8 @@ class _LoginPageState extends State<LoginPage> {
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'please enter an email';
+                    } else if (!validEmail.hasMatch(value)) {
+                      return 'Please enter a valid email';
                     } else {
                       return null;
                     }
@@ -71,6 +74,8 @@ class _LoginPageState extends State<LoginPage> {
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'please enter your password';
+                    } else if (value.length < 6) {
+                      return 'password must be at least 6 characters';
                     } else {
                       return null;
                     }
