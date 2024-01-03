@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
                   decoration: const InputDecoration(
-                    labelText: 'email',
+                    labelText: 'email:',
                     border: InputBorder.none,
                   ),
                 ),
@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _passwordController,
                   obscureText: true,
                   decoration: const InputDecoration(
-                      labelText: 'password', border: InputBorder.none),
+                      labelText: 'password:', border: InputBorder.none),
                 ),
               ),
               TextButton(
